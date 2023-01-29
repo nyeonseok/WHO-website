@@ -4,29 +4,69 @@
   <title>WHO1-Welcome</title>
   <meta charset="utf-8">
   <style>
-    a{
-      color:black;
-      text-decoration: none;
+    body{
+      margin:0;
     }
     h1{
       font-size:50px;
       text-align: center;
+      border-bottom: 1px solid gray;
+      margin:0;
+      padding:20px;
+    }
+    a{
+      color:black;
+      text-decoration: none;
+    }
+    ol{
+      border-right: 1px solid gray;
+      width:150px;
+      margin:0;
+      padding:20px;
+    }
+    #grid{
+      display:grid;
+      grid-template-columns: 200px 1fr;
+    }
+    #grid ol{
+      padding-left:40px
+    }
+    #article{
+      padding-left:40px
+    }
+    @media(max-width:825px){
+      #grid{
+        display:block;
+      }
+      ol{
+        border-right:none;
+      }
+      h1{
+        border-bottom:none;
+      }
+      #grid ol{
+        padding-left:55px
+      }
     }
 
   </style>
 </head>
 <body>
   <h1><a href="index.html">WHO?</a></h1>
+<div id="grid">
   <ol>
     <li><a href="1.html">An Hyeon Seok</a></li>
     <li><a href="2.html">Lee Young Hoon</a></li>
     <li><a href="3.html">Ha Hyeon Jae</a></li>
   </ol>
-  <h2>Let's know about 3 person</h2>
-  <p>우리는 여기서 안현석, 이용훈, 하현재에 대해 알아보도록 한다.
-  </p>
-  <img src="아년석.jpg" width="15%">
-  <img src="하자지.jpg" width="15%">
-  <img src="이용훈.jpg" width="15%">
+  <div id="article">
+    <h2>Let's know about 3 person</h2>
+    <p>우리는 여기서 안현석, 이용훈, 하현재에 대해 알아보도록 한다.
+    </p>
+    <img src="아년석.jpg" width="15%">
+    <img src="하자지.jpg" width="15%">
+    <img src="이용훈.jpg" width="15%">
+  </div>
+</div>
 </body>
 </html>
